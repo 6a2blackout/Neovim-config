@@ -41,5 +41,5 @@ vim.opt.clipboard = ""
 vim.keymap.set('v', '<leader>y', '"+y', { desc = 'Copy selection to clipboard' })
 vim.keymap.set('n', '<leader>y', '"+y', { desc = 'Copy selection to clipboard' })
 vim.keymap.set('n', '<leader>Y', '"+y$', { desc = 'Copy to EOL to system clipboard' })
-vim.keymap.set('v', '<leader>p', '"+p', { desc = 'paste from system clipboard' })
-vim.keymap.set('n', '<leader>p', '"+p', { desc = 'paste from system clipboard' })
+vim.keymap.set('v', '<leader>P', '"+p', { desc = 'paste from system clipboard' })
+vim.keymap.set('n', '<leader>P', '"+p', { desc = 'paste from system clipboard' })
