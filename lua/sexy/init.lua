@@ -35,4 +35,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 
 
-vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard = ""
+
+
+vim.keymap.set('v', '<leader>y', '"+y', { desc = 'Copy selection to clipboard' })
+vim.keymap.set('n', '<leader>y', '"+y', { desc = 'Copy selection to clipboard' })
+vim.keymap.set('n', '<leader>Y', '"+y$', { desc = 'Copy to EOL to system clipboard' })
+vim.keymap.set('v', '<leader>p', '"+p', { desc = 'paste from system clipboard' })
+vim.keymap.set('n', '<leader>p', '"+p', { desc = 'paste from system clipboard' })
