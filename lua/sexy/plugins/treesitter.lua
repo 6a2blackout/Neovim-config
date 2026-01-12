@@ -16,7 +16,7 @@ return {
         configs.setup({
             ensure_installed = { 
                 "c", "lua", "vim", "vimdoc", "query", 
-                "javascript", "html", "css", "python", "rust" 
+                "javascript", "html", "css", "python" 
             },
             sync_install = false,
             auto_install = true,

@@ -5,12 +5,11 @@ return {
             "williamboman/mason.nvim",
             "williamboman/mason-lspconfig.nvim",
             "hrsh7th/cmp-nvim-lsp", 
-            "hrsh7th/nvim-cmp", -- Added this strictly as a dep to prevent crashes
+            "hrsh7th/nvim-cmp",
         },
         config = function()
             require("mason").setup()
 
-            -- Fix the "Encoding" warning by forcing UTF-16
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
             capabilities.offsetEncoding = { "utf-16" }
 
@@ -27,7 +26,7 @@ return {
                         vim.lsp.enable(server_name)
                     end,
 
-                    -- Python: Pyright (Intelligence)
+                    -- pyright is here
                     ["pyright"] = function()
                         vim.lsp.config["pyright"] = {
                             capabilities = capabilities,
@@ -40,7 +39,7 @@ return {
                         vim.lsp.enable("pyright")
                     end,
 
-                    -- Python: Ruff (Linting/Formatting)
+                    -- Ruff is here 
                     ["ruff"] = function()
                         vim.lsp.config["ruff"] = {
                             capabilities = capabilities,
