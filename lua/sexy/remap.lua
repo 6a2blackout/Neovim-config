@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
-vim .opt.nu = true
+vim.opt.nu = true
 vim.opt.relativenumber = true
 
 
@@ -16,7 +16,7 @@ vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undofile = false
+vim.opt.undofile = true
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = false
