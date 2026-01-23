@@ -15,7 +15,7 @@ return {
 
             require("mason-lspconfig").setup({
                 ensure_installed = {
-                    "clangd", "pyright", "ruff", "html", "cssls",
+                    "clangd", "pyright", "ruff", "html", "cssls", "ts_ls", "eslint",
                 },
                 automatic_installation = true,
                 handlers = {
