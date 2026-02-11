@@ -37,7 +37,7 @@ vim.opt.colorcolumn = "80"
 --
 
 
-vim.opt.guicursor = ""
+vim.opt.guicursor = "n-v-c-i:block"
 
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
