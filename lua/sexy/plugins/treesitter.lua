@@ -12,7 +12,8 @@ return {
                 "c", "lua", "vim", "vimdoc", "query", 
                 "javascript", "typescript", "tsx", -- Added TS support
                 "html", "css", "python",
-                "markdown", "markdown_inline" -- Added Markdown support
+                "markdown", "markdown_inline",
+                "sql"
             },
             sync_install = false,
             auto_install = true,
