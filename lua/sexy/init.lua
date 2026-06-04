@@ -6,11 +6,22 @@ require("sexy.lazy")
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*.py",
   callback = function()
-    vim.lsp.buf.format({ 
+    vim.lsp.buf.format({
         async = false,
-        
 
-        filter = function(client) return client.name == "ruff" end 
+
+        filter = function(client) return client.name == "ruff" end
+    })
+  end,
+})
+
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.rs",
+  callback = function()
+    vim.lsp.buf.format({
+        async = false,
+        filter = function(client) return client.name == "rust_analyzer" end
     })
   end,
 })

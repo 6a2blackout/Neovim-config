@@ -12,7 +12,7 @@ return {
             require("mason-lspconfig").setup({
                 ensure_installed = {
                     "clangd", "pyright", "ruff", "html", "cssls", "ts_ls", "eslint",
-                    "sqlls",
+                    "sqlls", "rust_analyzer",
                 },
                 automatic_installation = true,
                 handlers = {
@@ -54,6 +54,21 @@ return {
                             on_attach = function(client)
                                 client.server_capabilities.hoverProvider = false
                             end
+                        })
+                    end,
+
+                    -- 5. Rust Handler (clippy for linting, rustfmt for formatting)
+                    ["rust_analyzer"] = function()
+                        local capabilities = require("cmp_nvim_lsp").default_capabilities()
+                        require("lspconfig").rust_analyzer.setup({
+                            capabilities = capabilities,
+                            settings = {
+                                ["rust-analyzer"] = {
+                                    checkOnSave = { command = "clippy" },
+                                    cargo = { allFeatures = true },
+                                    procMacro = { enable = true },
+                                }
+                            }
                         })
                     end,
                 }
